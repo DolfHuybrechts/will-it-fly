@@ -947,8 +947,8 @@ void visualization_vtk_c::streamlines_plot(vtkSmartPointer<vtkStructuredGrid> sg
 
 	vtkSmartPointer<vtkLineSource> seeds = vtkSmartPointer<vtkLineSource>::New();
 	seeds->SetResolution(number_of_streamlines);
-	seeds->SetPoint1(min_range.x, max_range.y, 0);
-	seeds->SetPoint2(min_range.x, min_range.y, 0);
+	seeds->SetPoint1(streamline_seeds.begin.x, streamline_seeds.begin.y, 0);
+	seeds->SetPoint2(streamline_seeds.end.x, streamline_seeds.end.y, 0);
 
 	// Setting Streamline properties
 	vtkSmartPointer<vtkStreamLine> streamLine = vtkSmartPointer<vtkStreamLine>::New();

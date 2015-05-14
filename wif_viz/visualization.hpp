@@ -61,8 +61,6 @@ public:
 
 	void set_streamline_seeds(const wif_core::line_2d_c & streamline_seeds);
 
-	void set_streamline_resolution(uint32_t streamline_resolution);
-
 	//
 
 protected:
@@ -85,7 +83,6 @@ protected:
 	wif_core::airfoil_c * airfoil;
 
 	wif_core::line_2d_c streamline_seeds;
-	uint32_t streamline_resolution;
 
 private:
 
